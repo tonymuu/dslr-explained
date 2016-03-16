@@ -2,11 +2,14 @@
 <html>
 	<head>
 		<title>Page Title</title>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/script.js"></script>
 	</head>
 	<body>
 		<div class="sliders-container">
-			<div class="slider-container">
-				<input class="slider" id="aperture-slider" type="range">
+			<div class="slider-container" oninput="apertureSlider()">
+				<input class="slider" id="aperture-slider" type="range" min="0" max="10" step="0.1">
+				<p id="aperture-value"></p>
 			</div>
 			<div class="slider-container">
 				<input class="slider" id="iso-slider" type="range">
@@ -15,9 +18,9 @@
 				<input class="slider" id="shutterspeed-slider" type="range">
 			</div>
 		</div>
-		<div class="image">
-			<img class="image" id="layer-2" src="img/bkg.jpg">
-			<img class="image" id="layer-1" src="img/duck.png">
+		<div class="images-container">
+			<img id="layer-2" src="img/bkg.jpg">
+			<img id="layer-1" src="img/duck.png">
 		</div>
 	</body>
 </html>
