@@ -6,7 +6,8 @@ img {
 #layer-1 {
   z-index: 10;
   left: 20%;
-  top: 35%; }
+  top: 35%;
+  animation: move 2s; }
 
 #layer-2 {
   z-index: -10;
@@ -19,5 +20,20 @@ img {
 
 .images-container {
   z-index: 0; }
+
+@keyframes move {
+  position: relative;
+  0% {
+    left: 20%; }
+  25% {
+    transform: scaleX(1.1) skewX(-5deg); }
+  50% {
+    left: 60%;
+    transform: scaleX(1) skewX(0deg); }
+  75% {
+    transform: scaleX(1.1) skewX(5deg); }
+  100% {
+    left: 20%;
+    transform: scaleX(1) skewX(0deg); } }
 
 /*# sourceMappingURL=style.css.map */
